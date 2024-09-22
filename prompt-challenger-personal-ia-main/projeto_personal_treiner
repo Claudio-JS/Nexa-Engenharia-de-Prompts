@@ -1,0 +1,220 @@
+
+Você e um especialista personal trainer e vai me ajudar a montar um treino ideal, baseado nas três variáveis abaixo:
+{{Biotipo}}
+{{Treino}}
+{{Tipos}}
+
+#Regras
+Regra1: Biotipo
+identificar qual o tipo informado nas variáveis acima 
+-Ectomorfo 	Corpo mais magro, difícil ganhar peso e massa muscular. 
+-Mesomorfo 	Corpo naturalmente musculoso, facilidade para ganhar massa muscular e perder gordura. 
+-Endomorfo 	Corpo com tendência a acumular gordura, maior dificuldade em perder peso. 
+
+Regra2:Treino
+dependendo da quantidade mínima de treino informado na área de variáveis , criar uma das periodizações de treino abaixo
+
+-1 dia 	Treino Full Body 
+-3 dias 	Treino ABC 
+-5 dias 	Treino ABCDE
+
+Regra 3: Tipos
+-Funcional  Exercícios que melhoram a funcionalidade do corpo, usando movimentos naturais. 
+-Maquinário Exercícios feitos em máquinas, com foco em isolar grupos musculares. 
+-Peso Livre 	Exercícios com pesos livres, como halteres e barras, para trabalhar vários grupos musculares simultaneamente. 
+-Cardio Exercícios voltados para melhorar a resistência cardiovascular, como corrida ou ciclismo. 
+-HIIT Treinos intervalados de alta intensidade, ótimos para queima de gordura.
+
+Com base nos valores informados na área de variáveis e com as guidelines, crie um treino ideal para a pessoa que corresponde a combinação destes três valores
+
+
+Para montar o treino ideal, basta fornecer os valores correspondentes às variáveis **Biotipo**, **Treino** e **Tipos**. A partir daí, seguirei as regras que você descreveu para montar um plano adequado.
+
+Por exemplo:
+
+- **Biotipo**: Ectomorfo, Mesomorfo ou Endomorfo
+- **Treino**: 1 dia, 3 dias ou 5 dias por semana
+- **Tipos**: Funcional, Maquinário, Peso Livre, Cardio, HIIT
+
+Assim que me passar essas informações, eu elaboro o treino ideal com base nelas!
+
+
+-biotipo = endomorfo
+treino=3 dias
+tipos=funciona
+
+
+Com base nas suas variáveis:
+
+- **Biotipo**: Endomorfo
+- **Treino**: 3 dias (periodização ABC)
+- **Tipos**: Funcional
+
+### Treino ideal para **Endomorfo** com 3 dias de treino funcional
+
+**Objetivo**: Melhorar a funcionalidade corporal, aumentar o gasto calórico e ajudar na perda de gordura, preservando a massa muscular. O treino funcional trabalha grandes grupos musculares com movimentos compostos e naturais, o que também ajuda no condicionamento cardiovascular.
+
+#### **Treino ABC (3 dias por semana)**
+
+---
+
+**Dia A: Parte Superior Funcional**
+
+- **Aquecimento**: 
+  - Polichinelos ou Corrida no lugar - 5 minutos
+
+- **Circuito de Exercícios** (3-4 séries de 12-15 repetições):
+  1. **Flexão de braço** (apoio normal ou inclinado)
+  2. **Remada com elástico** (ou com pesos livres, se disponível)
+  3. **Desenvolvimento de ombros com elástico** (ou halteres)
+  4. **Prancha alta com alternância de braço** (mantendo a postura funcional)
+  5. **Elevação lateral com elásticos** ou halteres
+
+- **Finalização**: 
+  - 2 minutos de corda ou corrida estacionária
+
+---
+
+**Dia B: Parte Inferior Funcional**
+
+- **Aquecimento**:
+  - Agachamentos com peso corporal - 3 minutos
+
+- **Circuito de Exercícios** (3-4 séries de 12-15 repetições):
+  1. **Agachamento com peso corporal** (ou com barra leve)
+  2. **Avanço (lunge) com halteres ou peso corporal**
+  3. **Levantamento terra romeno com halteres** (foco em estabilidade)
+  4. **Elevação de quadril (hip thrust)** no solo
+  5. **Passadas laterais com elástico**
+
+- **Finalização**: 
+  - Saltos pliométricos (15-20 saltos)
+  - Corrida leve - 2 minutos
+
+---
+
+**Dia C: Core e Cardio Funcional**
+
+- **Aquecimento**:
+  - Movimentos de mobilidade (rotação de quadril, tronco) - 5 minutos
+
+- **Circuito de Exercícios** (3-4 séries de 30-45 segundos cada):
+  1. **Prancha frontal** (com variação de tocar ombro)
+  2. **Mountain climbers** (escalada no chão)
+  3. **Agachamento com salto** (funcional e cardiovascular)
+  4. **Russian twists** (torção russa com peso leve ou sem peso)
+  5. **Burpees** (alta intensidade)
+
+- **Finalização**: 
+  - Sprint ou corrida de alta intensidade - 30 segundos (2-3 séries)
+  - Alongamento de corpo inteiro - 5 minutos
+
+---
+
+### **Dicas para o Endomorfo**:
+1. **Atenção à dieta**: Alimentação rica em proteínas e moderada em carboidratos, com foco em controle calórico.
+2. **Cardio constante**: Para auxiliar na perda de gordura, adicione 10-15 minutos de cardio leve após os treinos, se possível.
+3. **Intensidade alta**: Como a perda de peso pode ser mais difícil, manter a intensidade dos treinos ajuda a aumentar o gasto energético.
+
+Esse plano utiliza exercícios funcionais que trabalham grandes grupos musculares e movimentos naturais, o que é ideal para melhorar a composição corporal e a funcionalidade, auxiliando o endomorfo na perda de gordura e na melhoria do condicionamento físico.
+
+
+Para criar um programa em Python que gere um plano de treino personalizado baseado nos dados fornecidos (biotipo, treino e tipo de treino), podemos estruturar o código utilizando funções e listas/dicionários para armazenar os treinos, além de uma lógica condicional que monta o plano de acordo com as opções fornecidas.
+
+Abaixo está um exemplo básico de como implementar isso:
+
+### Código Python para gerar o treino:
+
+```python
+# Definição dos treinos por tipo
+treinos = {
+    "superior_funcional": [
+        "Flexão de braço", 
+        "Remada com elástico", 
+        "Desenvolvimento de ombros com elástico", 
+        "Prancha alta com alternância de braço", 
+        "Elevação lateral com elásticos"
+    ],
+    "inferior_funcional": [
+        "Agachamento com peso corporal", 
+        "Avanço com halteres ou peso corporal", 
+        "Levantamento terra romeno com halteres", 
+        "Elevação de quadril no solo", 
+        "Passadas laterais com elástico"
+    ],
+    "core_cardio_funcional": [
+        "Prancha frontal", 
+        "Mountain climbers", 
+        "Agachamento com salto", 
+        "Russian twists", 
+        "Burpees"
+    ]
+}
+
+# Função para gerar o treino de acordo com os dados
+def gerar_treino(biotipo, dias_treino, tipo_treino):
+    print(f"Biotipo: {biotipo}")
+    print(f"Dias de Treino: {dias_treino}")
+    print(f"Tipo de Treino: {tipo_treino}\n")
+    
+    if dias_treino == 1:
+        print("Treino Full Body (1 dia):\n")
+        print("Treino Full Body Funcional:")
+        for exercicio in treinos["superior_funcional"] + treinos["inferior_funcional"] + treinos["core_cardio_funcional"]:
+            print(f"- {exercicio}")
+    
+    elif dias_treino == 3:
+        print("Treino ABC (3 dias):\n")
+        print("Dia A: Parte Superior Funcional")
+        for exercicio in treinos["superior_funcional"]:
+            print(f"- {exercicio}")
+        
+        print("\nDia B: Parte Inferior Funcional")
+        for exercicio in treinos["inferior_funcional"]:
+            print(f"- {exercicio}")
+        
+        print("\nDia C: Core e Cardio Funcional")
+        for exercicio in treinos["core_cardio_funcional"]:
+            print(f"- {exercicio}")
+    
+    elif dias_treino == 5:
+        print("Treino ABCDE (5 dias) - Exemplo de como adicionar mais dias")
+        # Você pode expandir isso adicionando exercícios adicionais para os dias D e E
+    else:
+        print("Número de dias de treino inválido. Escolha entre 1, 3 ou 5 dias.")
+
+# Inputs do usuário
+biotipo = "Endomorfo"
+dias_treino = 3
+tipo_treino = "Funcional"
+
+# Gerar o plano de treino com base nas variáveis
+gerar_treino(biotipo, dias_treino, tipo_treino)
+```
+
+### Explicação:
+
+1. **Dicionário `treinos`**: Armazena os exercícios para cada tipo de treino funcional (superior, inferior, core e cardio).
+   
+2. **Função `gerar_treino()`**: Recebe três parâmetros:
+   - `biotipo`: Define o biotipo do usuário (nesse caso, não altera o treino diretamente, mas pode ser usado para ajustar intensidade ou volume futuramente).
+   - `dias_treino`: Define se o treino é Full Body (1 dia), ABC (3 dias) ou ABCDE (5 dias).
+   - `tipo_treino`: Tipo de treino (aqui usamos somente "Funcional", mas você pode adicionar outros tipos no futuro).
+
+3. **Estrutura condicional**: Baseada na quantidade de dias de treino, a função monta o programa correto:
+   - **1 dia**: Mostra um treino Full Body.
+   - **3 dias**: Mostra um treino ABC, dividido em superior, inferior e core/cardio.
+   - **5 dias**: Há uma sugestão de como poderia ser implementado, mas os detalhes são deixados em aberto para expansão.
+
+4. **Inputs do usuário**: No final, você define o biotipo, número de dias e tipo de treino para gerar o plano adequado.
+
+### Como rodar o programa:
+
+Basta executar o código em qualquer ambiente Python (como um IDE ou um notebook Jupyter) e ele imprimirá o plano de treino adequado com base nas suas variáveis de entrada.
+
+### Próximos passos:
+
+1. **Personalização adicional**: Você pode modificar o treino baseado no biotipo, ajustando o número de repetições ou séries.
+2. **Interface gráfica**: Adicionar uma interface gráfica (com Tkinter, por exemplo) para tornar a seleção dos parâmetros mais interativa.
+3. **Tipos de treino adicionais**: Adicionar lógica para tipos de treino "Maquinário", "Peso Livre", "Cardio" ou "HIIT", se necessário.
+
